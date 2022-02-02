@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { About, Error, Home, SingleCocktail } from './pages';
-import Navbar from './components/Navbar';
+import { Navbar } from './components';
 
 const App: React.FC = () => {
   return (

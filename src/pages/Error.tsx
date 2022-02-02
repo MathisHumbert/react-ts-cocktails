@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Error = () => {
+const Error: React.FC = () => {
   return (
     <section className='error-page section'>
       <div className='error-container'>
