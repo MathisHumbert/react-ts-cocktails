@@ -1,5 +1,5 @@
-const Loading = () => {
-  return <div></div>;
+const Loading: React.FC = () => {
+  return <div className='loader'></div>;
 };
 
 export default Loading;

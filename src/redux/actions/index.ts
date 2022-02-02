@@ -42,7 +42,6 @@ export const fetchData = (value: string, url: string) => {
       // ERROR
       dispatch({
         type: ActionType.FETCH_COCKTAILS_ERROR,
-        payload: error.message,
       });
     }
   };

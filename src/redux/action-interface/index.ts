@@ -12,7 +12,7 @@ interface FetchCocktailSuccess {
 
 interface FetchCocktailError {
   type: ActionType.FETCH_COCKTAILS_ERROR;
-  payload: string | boolean;
+  payload?: any;
 }
 
 export type Action =

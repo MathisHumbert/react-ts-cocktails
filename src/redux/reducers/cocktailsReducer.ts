@@ -4,14 +4,12 @@ import { Action } from '../action-interface';
 interface InitialState {
   loading: boolean;
   error: boolean;
-  errorMsg: string;
   data: any;
 }
 
 const initalState = {
   loading: false,
   error: false,
-  errorMsg: '',
   data: [],
 };
 
@@ -21,6 +19,12 @@ const reducer = (
 ): InitialState => {
   if (type === ActionType.FETCH_COCKTAILS_START) {
     return { ...state, loading: true, error: false };
+  }
+  if (type === ActionType.FETCH_COCKTAILS_SUCCESS) {
+    return { ...state, loading: false, data: payload };
+  }
+  if (type === ActionType.FETCH_COCKTAILS_ERROR) {
+    return { ...state, loading: false, error: true };
   }
   return state;
 };
