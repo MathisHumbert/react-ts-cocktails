@@ -8,7 +8,13 @@ interface Props {
   alcoholic: string;
 }
 
-const Cocktail = ({ id, img, name, glass, alcoholic }: Props) => {
+const Cocktail: React.FC<Props> = ({
+  id,
+  img,
+  name,
+  glass,
+  alcoholic,
+}: Props) => {
   return (
     <article className='cocktail'>
       <div className='img-container'>

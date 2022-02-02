@@ -1,19 +1,18 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { useSelector } from '../hooks/useTypedSelector';
-import { fetchData } from '../redux/actions';
+import { useActions } from '../hooks/useActions';
 import { Cocktail, Loading } from '.';
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 
 const CocktailList: React.FC = () => {
-  const dispatch = useDispatch();
+  const { fetchData } = useActions();
   const { loading, error, data } = useSelector(
     (state) => state.cocktailsReducer
   );
 
   useEffect(() => {
-    dispatch(fetchData('ma', url));
+    fetchData(`${url}ma`);
   }, []);
 
   if (loading) {

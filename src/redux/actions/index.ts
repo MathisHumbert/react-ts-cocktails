@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 import { Action } from '../action-interface';
 import { ActionType } from '../action-type';
 
-export const fetchData = (value: string, url: string) => {
+export const fetchData = (url: string) => {
   return async (dispatch: Dispatch<Action>) => {
     // START
     dispatch({
@@ -12,7 +12,7 @@ export const fetchData = (value: string, url: string) => {
 
     try {
       // SUCCESS
-      const { data } = await axios(`${url}${value}`);
+      const { data } = await axios(url);
 
       let drinks = data.drinks;
       drinks = drinks.map((drink: any) => {
