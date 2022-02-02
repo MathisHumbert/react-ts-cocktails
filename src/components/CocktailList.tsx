@@ -27,7 +27,7 @@ const CocktailList: React.FC = () => {
     );
   }
   return (
-    <section>
+    <section className='section'>
       <h2 className='section-title'>cocktails</h2>
       <div className='cocktails-center'>
         {data.map((item: any) => {
